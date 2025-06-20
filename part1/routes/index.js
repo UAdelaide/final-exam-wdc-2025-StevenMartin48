@@ -34,7 +34,9 @@ await database.execute(`
 
 const [users] = await database.execute('SELECT COUNT(*) AS count FROM Users');
 if (users[0].count === 0){
-  
+  await database.execute(`
+
+    `)
 }
 
 
