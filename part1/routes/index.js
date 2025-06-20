@@ -8,7 +8,7 @@ var database;
   try{
 database = await mysql.createConnection({
 host: 'localhost',
-user: 'root',
+user: 'root'
 });
 
 console.log('Mysql Connection established');
