@@ -11,7 +11,7 @@ host: 'localhost',
 user: 'root'
 });
 
-await connection.query('CREATE DATABSE IF NOT EXISTS DogWalkService');
+await connection.query('CREATE DATABASE IF NOT EXISTS DogWalkService');
 await connection.end();
 
 database = await mysql.createConnection({
