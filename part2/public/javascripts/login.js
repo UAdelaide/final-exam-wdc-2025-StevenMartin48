@@ -7,7 +7,7 @@
 
 
 function login(){
-    const login = {
+    const logindee = {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value
     }
@@ -15,15 +15,15 @@ function login(){
     const xhttp = new XMLHttpRequest();
 
     xhttp.onload = function() {
-        if (this.status == 200) {
+        if (this.status === 200) {
 
             window.location.href = '/';
 
         }
         else {
-           alert()
+           alert('this broke lol');
         }
-    }
+    };
 
     xhttp.open("post", "/login");
     xhttp.setRequestHeader('Content-Type', 'application/json');
