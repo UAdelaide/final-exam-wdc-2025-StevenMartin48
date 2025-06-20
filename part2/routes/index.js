@@ -19,10 +19,10 @@ router.use(cookieParser);
 
 
 router.post('/login', async (req, res) => {
-
+ console.log(providedCredentials);
  const providedCredentials = req.body; // provided username and password
 
- console.log(providedCredentials);
+
 
  const [databaseUserData] = await db.query('SELECT * FROM Users WHERE Username = ?', [providedCredentials.username]);
 
