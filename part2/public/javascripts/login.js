@@ -8,7 +8,8 @@
 
 function login(){
     const login = {
-        username: document.getElementById('username')
+        username: document.getElementById('username').value,
+        passwor
     }
 
     const xhttp = new XMLHttpRequest();
