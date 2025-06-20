@@ -5,6 +5,22 @@ var logger = require('morgan');
 const app = express();
 app.use(logger('dev'));
 
+const session = require('express-session');
+app.use(session(
+app
+  secret: 'himitsu',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 31,
+    secure: false
+   }
+  }
+));
+const cookieParser = require('cookie-parser');
+router.use(cookieParser());
+
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
