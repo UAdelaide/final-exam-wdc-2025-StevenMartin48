@@ -72,3 +72,4 @@ A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (3, '2025-06-10 10:30:00', 60, 'The park', 'accepted');
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (4, '2025-06-01 10:30:00', 60, 'The park', 'accepted');
