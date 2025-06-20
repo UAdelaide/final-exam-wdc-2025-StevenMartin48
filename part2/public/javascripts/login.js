@@ -17,7 +17,11 @@ function login(){
     xhttp.onload = function() {
         if (this.status === 200) {
 
-            if
+            if (this.responseText === 'owner') {
+
+                
+
+            }
 
         }
         else {
