@@ -76,13 +76,13 @@ router.post('/:id/apply', async (req, res) => {
 
 router.post('/login', async (req, res) =>{
 
- const credentials = req.body;
+ const providedCredentials = req.body; // provided username and password
 
- const [databaseUserData] = await db.query('SELECT * FROM Users WHERE Username = ?', [credentials.username]);
+ const [databaseUserData] = await db.query('SELECT * FROM Users WHERE Username = ?', [providedCredentials.username]);
 
  if(databaseUserData.Length === 0) {return res.status(401).send('Username not found'); } // checks if the above query is empty. Is only empty if user doesn't exist.
 
- if(credentials.password === databaseUserData.password_hash){
+ if(providedCredentials.password === databaseUserData.password_hash){
 
  }
 
