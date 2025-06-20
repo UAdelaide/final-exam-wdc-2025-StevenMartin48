@@ -158,4 +158,9 @@ router.get('/api/walkers/summary', async(req, res, next) => {
 
 module.exports = router;
 
-
+  {
+    "walker_username": "bobwalker",
+    "total_ratings": 2,
+    "average_rating": 4.5,
+    "completed_walks": 2
+  },
