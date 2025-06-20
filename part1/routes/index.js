@@ -123,7 +123,7 @@ router.get('/', function(req, res, next) {
 router.get('/api/dogs', async(req, res, next) => {
 
   try{
-  const [doggies] = await database.execute('SELECT * from Dogs');
+  const [doggies] = await database.execute('SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs INNER JOIN Users ON Dogs.owner_id=Users.user_id;');
 
   res.status(200).send(doggies);
  } catch (err){
