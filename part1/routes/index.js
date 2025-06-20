@@ -20,7 +20,16 @@ user: 'root',
 database: 'DogWalkService'
 });
 
+await database.execute(`
 
+
+
+
+
+
+
+
+  `)
 
 
 
