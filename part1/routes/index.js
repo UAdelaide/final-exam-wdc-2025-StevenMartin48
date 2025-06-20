@@ -144,16 +144,18 @@ router.get('/api/walkrequests/open', async(req, res, next) => {
  }
 });
 
+router.get('/api/walkrequests/open', async(req, res, next) => {
+  try{
+  const [walkerSummary] = await database.execute(`
+    SELECT WalkRequests.request_id, Dogs.name AS dog_name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username AS owner_username FROM WalkRequests INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE WalkRequests.status = 'open';
+    `);
+  res.status(200).send(openrequests);
+ } catch (err){
+  console.log(err);
+  res.status(500).send('Error');
+ }
+});
+
 module.exports = router;
 
 
-// [
-//   {
-//     "request_id": 1,
-//     "dog_name": "Max",
-//     "requested_time": "2025-06-10T08:00:00.000Z",
-//     "duration_minutes": 30,
-//     "location": "Parklands",
-//     "owner_username": "alice123"
-//   }
-// ]
