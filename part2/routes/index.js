@@ -1,0 +1,105 @@
+const express = require('express');
+const router = express.Router();
+const db = require('../models/db');
+const session = require('express-session');
+router.use(session(
+{
+  secret: 'himitsu',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 31,
+    secure: false
+   }
+  }
+));
+const cookieParser = require('cookie-parser');
+router.use(cookieParser);
+
+// GET all walk requests (for walkers to view)
+router.get('/', async (req, res) => {
+  try {
+    const [rows] = await db.query(`
+      SELECT wr.*, d.name AS dog_name, d.size, u.username AS owner_name
+      FROM WalkRequests wr
+      JOIN Dogs d ON wr.dog_id = d.dog_id
+      JOIN Users u ON d.owner_id = u.user_id
+      WHERE wr.status = 'open'
+    `);
+    res.json(rows);
+  } catch (error) {
+    console.error('SQL Error:', error);
+    res.status(500).json({ error: 'Failed to fetch walk requests' });
+  }
+});
+
+// POST a new walk request (from owner)
+router.post('/', async (req, res) => {
+  const { dog_id, requested_time, duration_minutes, location } = req.body;
+
+  try {
+    const [result] = await db.query(`
+      INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location)
+      VALUES (?, ?, ?, ?)
+    `, [dog_id, requested_time, duration_minutes, location]);
+
+    res.status(201).json({ message: 'Walk request created', request_id: result.insertId });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to create walk request' });
+  }
+});
+
+// POST an application to walk a dog (from walker)
+router.post('/:id/apply', async (req, res) => {
+  const requestId = req.params.id;
+  const { walker_id } = req.body;
+
+  try {
+    await db.query(`
+      INSERT INTO WalkApplications (request_id, walker_id)
+      VALUES (?, ?)
+    `, [requestId, walker_id]);
+
+    await db.query(`
+      UPDATE WalkRequests
+      SET status = 'accepted'
+      WHERE request_id = ?
+    `, [requestId]);
+
+    res.status(201).json({ message: 'Application submitted' });
+  } catch (error) {
+    console.error('SQL Error:', error);
+    res.status(500).json({ error: 'Failed to apply for walk' });
+  }
+});
+
+
+router.post('/login', async (req, res) => {
+
+ const providedCredentials = req.body; // provided username and password
+
+ console.log(providedCredentials);
+
+ const [databaseUserData] = await db.query('SELECT * FROM Users WHERE Username = ?', [providedCredentials.username]);
+
+ if(databaseUserData.Length !== 0) { return res.status(401).send('Username not found'); }
+ // checks if the above query is empty. Is only empty if user doesn't exist.
+
+ if(providedCredentials.password === databaseUserData[0].password_hash){
+  // [0] because the only response should be the user
+
+  req.session.user = { // session data
+  user_id: databaseUserData[0].user_id,
+  user_name: databaseUserData[0].user_name,
+  role: databaseUserData[0].role
+  };
+
+ }
+
+ return res.status(200).send('login successful');
+
+});
+
+
+module.exports = router;
+
