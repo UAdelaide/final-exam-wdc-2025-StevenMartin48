@@ -94,7 +94,7 @@ router.post('/login', async (req, res) => {
 
  }
 
- return res.status(200).send('')
+ return res.status(200).send('login successful');
 
 });
 
