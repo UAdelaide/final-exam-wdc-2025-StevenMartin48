@@ -158,7 +158,7 @@ router.get('/api/dogs', async(req, res, next) => {
 
   res.status(200).send(doggies);
  } catch (err){
-  console.log(err);
+
   res.status(500).send('Error');
  }
 });
@@ -174,7 +174,7 @@ router.get('/api/walkrequests/open', async(req, res, next) => {
     `);
   res.status(200).send(openrequests);
  } catch (err){
-  console.log(err);
+
   res.status(500).send('Error');
  }
 });
@@ -191,7 +191,7 @@ GROUP BY Users.user_id;
     `);
   res.status(200).send(walkerSummary);
  } catch (err){
-  console.log(err);
+
   res.status(500).send('Error');
  }
 });
