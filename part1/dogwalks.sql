@@ -57,8 +57,8 @@ CREATE TABLE WalkRatings (
 INSERT INTO Users (username, email, password_hash, role) VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner'); --id 1
 INSERT INTO Users (username, email, password_hash, role) VALUES ('bobwalker', 'bob@example.com', 'hashed456', 'walker'); --id 2
 INSERT INTO Users (username, email, password_hash, role) VALUES ('carol123', 'carol@example.com', 'hashed789', 'owner'); --id 3
-INSERT INTO Users (username, email, password_hash, role) VALUES ('JEFF', 'JEFF@jeffdabest.org', 'JEFFRULES123', 'owner'); --id 4
-INSERT INTO Users (username, email, password_hash, role) VALUES ('johnwalker', 'whiskey@times.com', 'oldfashioned', 'walker');  --id 5
+INSERT INTO Users (username, email, password_hash, role) VALUES ('JEFF', 'JEFF@jeffdabest.org', 'hashedforalltime', 'owner'); --id 4
+INSERT INTO Users (username, email, password_hash, role) VALUES ('johnwalker', 'whiskey@times.com', 'hashedandsalted', 'walker');  --id 5
 
 INSERT INTO Dogs (owner_id, name, size) VALUES (1, 'Max', 'medium');
 INSERT INTO Dogs (owner_id, name, size) VALUES (3, 'Max', 'medium');
