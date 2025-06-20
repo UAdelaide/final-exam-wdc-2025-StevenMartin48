@@ -21,7 +21,7 @@ function login(){
             if (this.responseText === 'owner') { // redirect owners to owner page
                 window.location.href = '/owner-dashboard.html';
             } else {
-                window.location.href = '/owner-dashboard.html';
+                window.location.href = '/walker-dashboard.html';
             }
 
         }
