@@ -2,11 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const walkRoutes = require('./routes/walkRoutes');
-const userRoutes = require('./routes/userRoutes');
-
+const walkRoutes = require('./routes/routes');
 app.use('/api/walks', walkRoutes);
-app.use('/api/users', userRoutes);
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
