@@ -3,7 +3,13 @@ var router = express.Router();
 var mysql = require('mysql2/promise');
 
 
-database = 
+const database = await mysql.createConnection({
+
+
+
+
+
+})
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
