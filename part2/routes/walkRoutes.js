@@ -74,7 +74,7 @@ router.post('/:id/apply', async (req, res) => {
 });
 
 
-router.post('/login', async (req, res) =>{
+router.post('/login', async (req, res) => {
 
  const providedCredentials = req.body; // provided username and password
 
