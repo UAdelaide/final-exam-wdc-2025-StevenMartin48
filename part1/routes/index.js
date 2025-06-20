@@ -2,12 +2,13 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql2/promise');
 
-
+(async () => {
 const database = await mysql.createConnection({
 host: 'localhost',
 user: 'root',
 database: 'DogWalkService'
 });
+)
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
