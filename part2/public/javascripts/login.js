@@ -7,5 +7,6 @@
 
 
 function login(){
-    const xhttp = new XH
+    const xhttp = new XMLHttpRequest();
+    
 }
