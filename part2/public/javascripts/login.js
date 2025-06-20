@@ -17,10 +17,8 @@ function login(){
     xhttp.onload = function() {
         if (this.status === 200) {
 
-            if (this.responseText === 'owner') {    // redirect owners to owner page
-
+            if (this.responseText === 'owner') { // redirect owners to owner page
                 window.location.href = '/owner-dashboard.html';
-
             }
 
         }
