@@ -126,7 +126,7 @@ router.get('/api/dogs', async(req, res, next) => {
   const [data] = await database.execute(
     'SELECT * from Dogs'
   );
-  res.status(200)send(data);
+  res.status(200).send(data);
  } catch (err){
   console.log(err);
   res.status(500).send('Error');
