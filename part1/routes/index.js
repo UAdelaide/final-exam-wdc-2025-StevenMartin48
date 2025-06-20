@@ -120,13 +120,13 @@ INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE
 
     await database.execute(`
 INSERT INTO WalkApplications (request_id, walker_id, status)
-VALUES (5, 4, 'accepted'),
-(6, 4, 'accepted'),
-(7, 4, 'accepted'),
-(8, 4, 'accepted'),
-(9, 4, 'accepted'),
-(10, 4, 'accepted'),
-(11, 4, 'accepted');
+VALUES (5, 5, 'accepted'),
+(6, 5, 'accepted'),
+(7, 5, 'accepted'),
+(8, 5, 'accepted'),
+(9, 2, 'accepted'),
+(10, 2, 'accepted'),
+(11, 2, 'accepted');
 
     `);
 
