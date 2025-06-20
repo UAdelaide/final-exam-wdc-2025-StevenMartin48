@@ -18,6 +18,9 @@ function login(){
         if (this.response.code == 200) {
 
         }
+        else {
+            
+        }
     }
 
     xhttp.open("post", "/login")
