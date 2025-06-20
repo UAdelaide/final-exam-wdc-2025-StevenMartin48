@@ -22,7 +22,7 @@ router.get('/', function(req, res, next) {
 router.get('/api/dogs', async(req, res, next) => {
 
   const [data] = await database.execute(
-    'SELECT * from '
+    'SELECT * from Dogs'
   )
 
 });
