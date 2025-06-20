@@ -182,7 +182,11 @@ router.get('/api/walkrequests/open', async(req, res, next) => {
 router.get('/api/walkers/summary', async(req, res, next) => {
   try{
   const [walkerSummary] = await database.execute(`
-SELECT Users.username AS walker_username, COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings, AVG(WalkRatings.rating) AS average_rating, COUNT(distinct WalkApplications.application_id) AS Completed_walks FROM Users LEFT JOIN WalkRatings ON Users.user_id = WalkRatings.walker_id LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id WHERE Users.role = 'walker'  GROUP BY Users.user_id;
+SELECT Users.username AS walker_username, COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings, AVG(WalkRatings.rating) AS average_rating, COUNT(distinct WalkApplications.application_id) AS Completed_walks
+FROM Users
+LEFT JOIN WalkRatings ON Users.user_id = WalkRatings.walker_id
+LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id
+WHERE Users.role = 'walker'  GROUP BY Users.user_id;
     `);
   res.status(200).send(walkerSummary);
  } catch (err){
