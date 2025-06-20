@@ -7,11 +7,11 @@ var mysql = require('mysql2/promise');
 const database = await mysql.createConnection({
 host: 'localhost',
 user: 'root',
-database: 'DogWalkService'
+database: 'DogWalkServ2ice'
 });
 
 console.log('Mysql Connection established');
-  } catch (err) {console.log(err)};
+  } catch (err) {console.log(err); }
 })();
 
 /* GET home page. */
