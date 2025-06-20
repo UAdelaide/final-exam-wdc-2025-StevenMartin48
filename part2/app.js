@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
-
+var logger = require('morgan');
 const app = express();
 
 // Middleware
