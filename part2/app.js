@@ -3,11 +3,11 @@ const path = require('path');
 require('dotenv').config();
 var logger = require('morgan');
 const app = express();
-
+app.use(logger('dev'));
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(logger('dev'));
+
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
