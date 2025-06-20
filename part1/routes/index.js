@@ -90,7 +90,8 @@ INSERT INTO Users (username, email, password_hash, role) VALUES ('alice123', 'al
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('JEFF', 'JEFF@jeffdabest.org', 'hashedforalltime', 'owner'),
-('johnwalker', 'whiskey@times.com', 'hashedandsalted', 'walker');
+('johnwalker', 'whiskey@times.com', 'hashedandsalted', 'walker'),
+('gabrielle', 'JEFF@jeffdabest.org', 'totalhashoftheheart', 'walker');
 `);
   await database.execute(`
 
