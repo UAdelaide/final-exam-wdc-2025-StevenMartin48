@@ -13,7 +13,7 @@ function login(){
     }
 
     const xhttp = new XMLHttpRequest();
-    xhttp.onload(){
+    xhttp.onload() = function() {
         if (this.response.code == 200) {
 
         }
