@@ -43,8 +43,9 @@ if (users[0].count === 0){
     size ENUM('small', 'medium', 'large') NOT NULL,
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
+`)
 
-
+  await database.execute(`
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
     dog_id INT NOT NULL,
@@ -55,6 +56,7 @@ CREATE TABLE WalkRequests (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (dog_id) REFERENCES Dogs(dog_id)
 );
+`)
 
 CREATE TABLE WalkApplications (
     application_id INT AUTO_INCREMENT PRIMARY KEY,
