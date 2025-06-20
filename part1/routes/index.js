@@ -111,21 +111,6 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
     `);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 console.log('Mysql Connection established');
   } catch (err) {console.log('connection failed \n', err); } // only reason for this to fail is database not existing
 })();
