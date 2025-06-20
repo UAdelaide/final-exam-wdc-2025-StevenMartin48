@@ -1,20 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
-const session = require('express-session');
-router.use(session(
-{
-  secret: 'himitsu',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 31,
-    secure: false
-   }
-  }
-));
-const cookieParser = require('cookie-parser');
-router.use(cookieParser);
+
 
 // GET all walk requests (for walkers to view)
 router.get('/', async (req, res) => {
@@ -74,31 +61,7 @@ router.post('/:id/apply', async (req, res) => {
 });
 
 
-router.post('/login', async (req, res) => {
 
- const providedCredentials = req.body; // provided username and password
-
- console.log(providedCredentials);
-
- const [databaseUserData] = await db.query('SELECT * FROM Users WHERE Username = ?', [providedCredentials.username]);
-
- if(databaseUserData.Length !== 0) { return res.status(401).send('Username not found'); }
- // checks if the above query is empty. Is only empty if user doesn't exist.
-
- if(providedCredentials.password === databaseUserData[0].password_hash){
-  // [0] because the only response should be the user
-
-  req.session.user = { // session data
-  user_id: databaseUserData[0].user_id,
-  user_name: databaseUserData[0].user_name,
-  role: databaseUserData[0].role
-  };
-
- }
-
- return res.status(200).send('login successful');
-
-});
 
 
 module.exports = router;
