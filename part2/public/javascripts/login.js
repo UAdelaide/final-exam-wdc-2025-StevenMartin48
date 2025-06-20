@@ -16,6 +16,7 @@ function login(){
     xhttp.onload(){
     }
     xhttp.open("post", "/login")
-    xhttp.setRequestHeader('Content-Type', 'application/json')
+    xhttp.setRequestHeader('Content-Type', 'application/json');
+    xhttp.send(JSON.stringify(l))
 
 }
