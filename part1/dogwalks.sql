@@ -73,4 +73,4 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (3, '2025-06-10 10:30:00', 60, 'The park', 'accepted');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (4, '2025-06-01 10:30:00', 60, 'Space', 'cancelled');
-INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (5, '2025-06-01 12:30:00', 60, 'Space', 'cancelled');
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (5, '2025-06-01 12:30:00', 180, 'The B', 'cancelled');
