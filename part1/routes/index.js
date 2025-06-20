@@ -21,7 +21,7 @@ database: 'DogWalkService'
 });
 
 await database.execute(`
-    CREATE TAB
+    CREATE TABLE IF NOT EXISTS 
 
 
 
