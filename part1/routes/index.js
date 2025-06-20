@@ -186,7 +186,8 @@ SELECT Users.username AS walker_username, COUNT(DISTINCT WalkRatings.rating_id) 
 FROM Users
 LEFT JOIN WalkRatings ON Users.user_id = WalkRatings.walker_id
 LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id
-WHERE Users.role = 'walker'  GROUP BY Users.user_id;
+WHERE Users.role = 'walker'
+GROUP BY Users.user_id;
     `);
   res.status(200).send(walkerSummary);
  } catch (err){
