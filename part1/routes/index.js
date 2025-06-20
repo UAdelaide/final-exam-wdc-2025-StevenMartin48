@@ -2,9 +2,11 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql2/promise');
 
+var database;
+
 (async () => {
   try{
-const database = await mysql.createConnection({
+database = await mysql.createConnection({
 host: 'localhost',
 user: 'root',
 database: 'DogWalkService'
