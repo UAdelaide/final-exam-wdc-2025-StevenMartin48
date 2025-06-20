@@ -6,10 +6,12 @@ var database;
 
 (async () => {
   try{
-database = await mysql.createConnection({
+const connection = await mysql.createConnection({
 host: 'localhost',
 user: 'root'
 });
+
+
 
 console.log('Mysql Connection established');
   } catch (err) {console.log('connection failed \n', err); } // only reason for this to fail is database not existing
