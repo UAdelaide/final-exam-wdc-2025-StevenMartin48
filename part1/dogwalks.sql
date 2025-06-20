@@ -60,7 +60,7 @@ INSERT INTO Users (username, email, password_hash, role) VALUES ('carol123', 'ca
 INSERT INTO Users (username, email, password_hash, role) VALUES ('JEFF', 'JEFF@jeffdabest.org', 'hashedforalltime', 'owner');
 INSERT INTO Users (username, email, password_hash, role) VALUES ('johnwalker', 'whiskey@times.com', 'hashedandsalted', 'walker');
 
-INSERT INTO Dogs (owner_id, name, size) VALUES (1, 'Max', 'medium');
+INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT ), 'Max', 'medium');
 INSERT INTO Dogs (owner_id, name, size) VALUES (3, 'Bella', 'small');
 INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'mrBig', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (1, 'Supermax', 'large');
