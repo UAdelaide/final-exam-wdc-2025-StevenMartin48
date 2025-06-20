@@ -14,8 +14,7 @@ app.use(session({
     maxAge: 1000 * 60 * 60 * 24 * 31, // cookies age, ms, seconds, hours, days
     secure: false
    }
-  }
-));
+}));
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
