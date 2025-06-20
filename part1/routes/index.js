@@ -30,7 +30,7 @@ await database.execute(`
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
   `);
-
+// if at this point users is empty, then throw in all the rest of the data, otherwise skip
 
 
 
