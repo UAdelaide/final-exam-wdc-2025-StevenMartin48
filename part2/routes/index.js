@@ -26,7 +26,9 @@ router.post('/login', async (req, res) => {
   };
 
 
-
+  if (req.session.user.role === '') {
+    
+  }
  return res.status(200).send('login successful');
 
 
