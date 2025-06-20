@@ -6,7 +6,8 @@ router.use(session(
 {
   secret: 'himitsu',
   resave: false,
-  saveU
+  saveUninitialized: false,
+  cookies : { }
 
 
 
