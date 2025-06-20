@@ -3,7 +3,7 @@ var router = express.Router();
 var mysql = require('mysql2/promise');
 
 
-
+database = 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
