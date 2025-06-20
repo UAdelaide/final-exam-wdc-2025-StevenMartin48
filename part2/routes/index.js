@@ -29,9 +29,8 @@ router.post('/login', async (req, res) => {
 
   if (req.session.user.role === 'owner') {
      return res.status(200).send('owner');
-  } else {
-     return res.status(200).send('walker');
   }
+     return res.status(200).send('walker');
 
 
 
