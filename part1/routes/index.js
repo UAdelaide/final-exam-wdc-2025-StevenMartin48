@@ -120,7 +120,7 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 
     await database.execute(`
 INSERT INTO WalkApplications (request_id, walker_id, status)
-VALUES (5, )
+VALUES (5, 4, accepted)
 
 
     `);
