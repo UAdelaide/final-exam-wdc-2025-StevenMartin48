@@ -66,11 +66,8 @@ INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'mrBig', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (1, 'Supermax', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'Godzilla', 'small');
 
-A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.
-A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
-
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (3, '2025-06-10 10:30:00', 60, 'The park', 'accepted');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (4, '2025-06-01 10:30:00', 60, 'Space', 'cancelled');
-INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (5, '2025-06-01 12:30:00', 180, 'The B', 'cancelled');
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (5, '2025-06-01 12:30:00', 180, 'The Beach', 'completed');
