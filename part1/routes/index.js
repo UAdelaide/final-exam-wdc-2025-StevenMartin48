@@ -28,6 +28,7 @@ router.get('/api/dogs', async(req, res, next) => {
   );
 
   console.log(data);
+  res
 
 });
 
