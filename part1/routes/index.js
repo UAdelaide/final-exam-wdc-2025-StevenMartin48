@@ -121,18 +121,18 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
     await database.execute(`
 INSERT INTO WalkApplications (request_id, walker_id, status)
 VALUES (5, 4, 'accepted'),
-VALUES (6, 4, 'accepted'),
-VALUES (7, 4, 'accepted'),
-VALUES (8, 4, 'accepted'),
-VALUES (9, 4, 'accepted'),
-VALUES (10, 4, 'accepted'),
-VALUES (11, 4, 'accepted')
+(6, 4, 'accepted'),
+(7, 4, 'accepted'),
+(8, 4, 'accepted'),
+(9, 4, 'accepted'),
+(10, 4, 'accepted'),
+(11, 4, 'accepted')
 
     `);
 
         await database.execute(`
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
-VALUES (5, 4, 4),
+VALUES (5, 4, 4, ),
 
 
     `);
