@@ -69,4 +69,4 @@ INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'Godzilla', 'small');
 A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.
 A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
 
-INSERT INTO WalkRequests (dog_id, '')
+INSERT INTO WalkRequests (dog_id, '2025-06-10 08:00:00')
