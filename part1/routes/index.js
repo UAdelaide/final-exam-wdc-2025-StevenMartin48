@@ -23,7 +23,9 @@ router.get('/api/dogs', async(req, res, next) => {
 
   const [data] = await database.execute(
     'SELECT * from Dogs'
-  )
+  );
+
+  console.log(data);
 
 });
 
