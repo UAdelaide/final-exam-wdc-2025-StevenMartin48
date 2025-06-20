@@ -82,7 +82,9 @@ router.post('/login', async (req, res) =>{
 
  if(databaseUserData.Length === 0) {return res.status(401).send('Username not found'); }  //checks if the above query is empty. Is only empty if user doesn't exist.
 
- if(credentials.password === databaseUserData.password)
+ if(credentials.password === databaseUserData.password_hash){
+  
+ }
 
 
 })
