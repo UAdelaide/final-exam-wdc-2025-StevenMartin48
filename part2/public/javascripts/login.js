@@ -8,5 +8,13 @@
 
 function login(){
     const xhttp = new XMLHttpRequest();
-    xhttp.onload()
+    xhttp.onload(){
+
+
+
+
+
+    }
+
+    
 }
