@@ -19,5 +19,8 @@ app.use('/api/users', userRoutes);
 app.use('/', index);
 
 // Export the app instead of listening here
-module.exports = app;
+// module.exports = app;
 
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
+});
