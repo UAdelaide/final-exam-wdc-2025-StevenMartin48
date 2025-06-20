@@ -12,7 +12,7 @@ app.use(logger('dev'));
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const routes = require('./routes/routes');
+const index = require('./routes/index.js');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
