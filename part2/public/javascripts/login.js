@@ -21,12 +21,12 @@ function login(){
 
         }
         else {
-            // test
+           alert()
         }
     }
 
-    xhttp.open("post", "/login")
+    xhttp.open("post", "/login");
     xhttp.setRequestHeader('Content-Type', 'application/json');
-    xhttp.send(JSON.stringify(login))
+    xhttp.send(JSON.stringify(login));
 
 }
