@@ -34,7 +34,7 @@ await database.execute(`
 
 const [users] = await database.execute('SELECT COUNT(*) AS count FROM Users');
 if (users[0].count === 0){
-  await database.execute(`
+  await database.execute('
 
     CREATE TABLE Dogs (
     dog_id INT AUTO_INCREMENT PRIMARY KEY,
