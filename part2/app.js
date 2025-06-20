@@ -6,8 +6,7 @@ const app = express();
 app.use(logger('dev'));
 
 const session = require('express-session');
-app.use(session(
-app
+app.use(session({
   secret: 'himitsu',
   resave: false,
   saveUninitialized: false,
@@ -18,7 +17,7 @@ app
   }
 ));
 const cookieParser = require('cookie-parser');
-router.use(cookieParser());
+app.use(cookieParser());
 
 
 // Middleware
