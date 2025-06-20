@@ -2,13 +2,8 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
-
-
-
 router.post('/login', async (req, res) => {
  const providedCredentials = req.body; // provided username and password
-
-
 
  const [databaseUserData] = await db.query('SELECT * FROM Users WHERE Username = ?', [providedCredentials.username]);
 
@@ -23,17 +18,10 @@ router.post('/login', async (req, res) => {
   user_name: databaseUserData[0].user_name,
   role: databaseUserData[0].role
   };
-
-
-
      return res.status(200).send(req.session.user.role);
-
 }
-
  return res.status(401).send('login failed');
-
 });
-
 
 module.exports = router;
 
