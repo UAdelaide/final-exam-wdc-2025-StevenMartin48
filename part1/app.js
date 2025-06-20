@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 const routes = require('./routes/routes');
-app.use('/api/walks', walkRoutes);
+app.use('/api/walks', routes);
 
 
 app.get('/', (req, res) => {
