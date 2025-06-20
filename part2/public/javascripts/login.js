@@ -17,7 +17,7 @@ function login(){
     xhttp.onload = function() {
         if (this.status === 200) {
 
-            window.location.href = '/';
+            if
 
         }
         else {
