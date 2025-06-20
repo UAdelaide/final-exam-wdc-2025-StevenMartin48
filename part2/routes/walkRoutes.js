@@ -80,6 +80,7 @@ router.post('/login', async (req, res) =>{
 
  const [serversideUsername] = await db.query('SELECT * FROM Users WHERE Username = ?', [credentials.username]);
 
+ if(serversideUsername.Length === 0)
 
 
 })
