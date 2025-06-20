@@ -34,7 +34,7 @@ await database.execute(`
 
 const [users] = await database.execute('SELECT COUNT(*) AS count FROM Users');
 if (users[0].count === 0){
-  await database.execute('
+  await database.execute(`
 
     CREATE TABLE Dogs (
     dog_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -98,7 +98,7 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Supermax'), '2025-06-01 10:30:00', 60, 'Space', 'cancelled');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-01 12:30:00', 180, 'The Beach', 'completed');
 
-    );
+    `);
 }
 
 
