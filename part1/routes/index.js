@@ -44,6 +44,7 @@ if (users[0].count === 0){
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
 
+
 CREATE TABLE WalkRequests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
     dog_id INT NOT NULL,
