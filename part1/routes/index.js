@@ -23,11 +23,14 @@ router.get('/', function(req, res, next) {
 
 router.get('/api/dogs', async(req, res, next) => {
 
+  try{
   const [data] = await database.execute(
     'SELECT * from Dogs'
   );
   res.send(data);
-
+ } catch (err){
+  
+ }
 });
 
 router.get('/api/walkrequests/open', async(req, res, next) => {
