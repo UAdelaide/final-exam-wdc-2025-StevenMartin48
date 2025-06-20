@@ -61,7 +61,7 @@ INSERT INTO Users (username, email, password_hash, role) VALUES ('JEFF', 'JEFF@j
 INSERT INTO Users (username, email, password_hash, role) VALUES ('johnwalker', 'whiskey@times.com', 'hashedandsalted', 'walker');
 
 INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium');
-INSERT INTO Dogs (owner_id, name, size) VALUES (3, 'Bella', 'small');
+INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small');
 INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'mrBig', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (1, 'Supermax', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'Godzilla', 'small');
