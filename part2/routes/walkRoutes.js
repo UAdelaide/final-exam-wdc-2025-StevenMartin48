@@ -13,7 +13,7 @@ router.use(session(
    }
   }
 ));
-
+const cookieParser = require('cookie-parser');
 
 // GET all walk requests (for walkers to view)
 router.get('/', async (req, res) => {
