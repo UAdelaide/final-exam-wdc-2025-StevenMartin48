@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const walkRoutes = require('./routes');
-app.use('/api/walks', walkRoutes);
+const routes = require('./routes');
+app.use('/api/walks', routes);
 
 
 app.get('/', (req, res) => {
