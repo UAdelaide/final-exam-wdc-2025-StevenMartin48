@@ -15,6 +15,7 @@ function login(){
     const xhttp = new XMLHttpRequest();
     xhttp.onload(){
     }
-    xhttp.open("post")
+    xhttp.open("post", "/login")
+    xhttp.setRequestHeader()
 
 }
