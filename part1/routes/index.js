@@ -33,7 +33,7 @@ router.get('/api/dogs', async(req, res, next) => {
 router.get('/api/walkrequests/open', async(req, res, next) => {
 
   const [data] = await database.execute(
-    'SELECT * from WalkRequests '
+    'SELECT * from WalkRequests WHERE status = open'
   );
   res.send(data);
 
