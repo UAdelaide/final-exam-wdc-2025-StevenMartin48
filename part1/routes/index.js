@@ -9,7 +9,6 @@ var database;
 database = await mysql.createConnection({
 host: 'localhost',
 user: 'root',
-database: 'DogWalkService'
 });
 
 console.log('Mysql Connection established');
