@@ -96,9 +96,9 @@ INSERT INTO Users (username, email, password_hash, role) VALUES ('alice123', 'al
 
 INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
 ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
-INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'JEFF'), 'mrBig', 'large');
-INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Supermax', 'large');
-INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'JEFF'), 'Godzilla', 'small');
+((SELECT user_id FROM Users WHERE username = 'JEFF'), 'mrBig', 'large'),
+((SELECT user_id FROM Users WHERE username = 'alice123'), 'Supermax', 'large'),
+((SELECT user_id FROM Users WHERE username = 'JEFF'), 'Godzilla', 'small');
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open');
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES ((SELECT dog_id FROM Dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted');
