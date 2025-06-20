@@ -4,7 +4,9 @@ var mysql = require('mysql2/promise');
 
 
 const database = await mysql.createConnection({
-
+host: 'localhost',
+user: 'root',
+database: ''
 
 
 
