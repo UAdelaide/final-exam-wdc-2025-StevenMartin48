@@ -8,6 +8,7 @@ host: 'localhost',
 user: 'root',
 database: 'DogWalkService'
 });
+}
 )
 
 /* GET home page. */
