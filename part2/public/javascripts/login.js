@@ -19,7 +19,7 @@ function login(){
 
             if (this.responseText === 'owner') {    // redirect owners to owner page
 
-                window.location.href = '/index';
+                window.location.href = '/owner-dashboard.html';
 
             }
 
