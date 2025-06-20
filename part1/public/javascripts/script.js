@@ -1,6 +1,6 @@
 import { createApp, ref } from 'vue';
 
-createApp({
+const app = createApp({
   setup() {
     return {
       count: ref(0)
