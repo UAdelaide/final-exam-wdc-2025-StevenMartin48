@@ -107,7 +107,15 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 ((SELECT dog_id FROM Dogs WHERE name = 'mrBig'), '2025-06-10 10:30:00', 60, 'The park', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Supermax'), '2025-06-01 10:30:00', 60, 'Space', 'cancelled'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-01 12:30:00', 180, 'The Beach', 'completed');
-((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-01 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-02 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-03 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-04 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-05 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-06 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-07 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-08 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-09 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-10 12:30:00', 180, 'The Beach', 'completed');
 
     `);
 
