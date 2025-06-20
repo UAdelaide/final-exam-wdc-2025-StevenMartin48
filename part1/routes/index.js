@@ -11,7 +11,7 @@ database: 'DogWalkService'
 });
 
 console.log('Mysql Connection established');
-
+  } catch (err) {console.log(err)};
 })();
 
 /* GET home page. */
