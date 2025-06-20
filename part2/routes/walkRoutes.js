@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 const session = require('express-session');
+router.use(session)
 
 // GET all walk requests (for walkers to view)
 router.get('/', async (req, res) => {
