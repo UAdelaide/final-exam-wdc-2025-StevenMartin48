@@ -11,13 +11,9 @@ router.use(session(
     maxAge: 1000 * 60 * 60 * 24 * 31,
     secure: false
    }
+  }
+));
 
-
-
-
-}
-
-))
 
 // GET all walk requests (for walkers to view)
 router.get('/', async (req, res) => {
