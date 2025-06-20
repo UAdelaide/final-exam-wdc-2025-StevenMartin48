@@ -4,7 +4,9 @@ const db = require('../models/db');
 const session = require('express-session');
 router.use(session(
 {
-  secret: 'el'
+  secret: 'himitsu',
+  resave: false,
+  saveU
 
 
 
