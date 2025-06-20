@@ -80,7 +80,7 @@ router.post('/login', async (req, res) =>{
 
  const [serversideUsername] = await db.query(`
 
-  SELECT * FROM 
+  SELECT * FROM Users WHERE Username = 
 
   `);
 
