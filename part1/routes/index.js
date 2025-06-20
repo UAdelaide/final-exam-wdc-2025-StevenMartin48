@@ -110,7 +110,11 @@ INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE
 ((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-03 12:30:00', 180, 'The Beach', 'completed'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-04 12:30:00', 180, 'The Beach', 'completed'),
 ((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-05 12:30:00', 180, 'The Beach', 'completed'),
-((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-06 12:30:00', 180, 'The Beach', 'completed');
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-06 12:30:00', 180, 'The Beach', 'completed'),
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-07 12:30:00', 180, 'The Beach', 'completed'),
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-08 12:30:00', 180, 'The Beach', 'completed'),
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-09 12:30:00', 180, 'The Beach', 'completed'),
+((SELECT dog_id FROM Dogs WHERE name = 'Godzilla'), '2025-06-10 02:30:00', 180, 'The Beach', 'completed');
 `);
 
     await database.execute(`
