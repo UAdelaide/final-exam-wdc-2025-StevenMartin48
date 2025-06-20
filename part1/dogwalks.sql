@@ -66,3 +66,4 @@ INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'Maximillian', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (1, 'Supermax', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'Godzilla', 'small');
 
+INSERT INTO WalkRequests ()
