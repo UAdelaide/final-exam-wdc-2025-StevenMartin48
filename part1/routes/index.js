@@ -21,7 +21,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/api/dogs', function(req, res, next) {
 
-  const [data] = await database.
+  const [data] = await database.execute(
+    'SELECT'
+  )
 
 });
 
