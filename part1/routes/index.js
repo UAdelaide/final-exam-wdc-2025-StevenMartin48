@@ -33,7 +33,9 @@ await database.execute(`
 // if at this point users is empty, then throw in all the rest of the data, otherwise skip
 
 const [users] = await database.execute('SELECT COUNT(*) AS count FROM Users');
-if 
+if (users[0].count === 0){
+  
+}
 
 
 
