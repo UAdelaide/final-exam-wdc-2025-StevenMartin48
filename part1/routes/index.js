@@ -9,8 +9,9 @@ user: 'root',
 database: 'DogWalkService'
 });
 
-console.log('')
+console.log('Mysql Connection established');
 
+})();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
