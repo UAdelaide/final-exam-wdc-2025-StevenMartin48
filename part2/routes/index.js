@@ -19,7 +19,7 @@ router.use(cookieParser);
 
 
 router.post('/login', async (req, res) => {
- console.log(providedCredentials);
+ console.log(req.body);
  const providedCredentials = req.body; // provided username and password
 
 
