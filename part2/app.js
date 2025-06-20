@@ -4,6 +4,7 @@ require('dotenv').config();
 var logger = require('morgan');
 const app = express();
 app.use(logger('dev'));
+
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
@@ -19,8 +20,4 @@ app.use('/api/users', userRoutes);
 app.use('/', index);
 
 // Export the app instead of listening here
-// module.exports = app;
-
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
+module.exports = app;
