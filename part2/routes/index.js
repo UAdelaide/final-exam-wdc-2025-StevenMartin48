@@ -1,20 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
-const session = require('express-session');
-router.use(session(
-{
-  secret: 'himitsu',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 31,
-    secure: false
-   }
-  }
-));
-const cookieParser = require('cookie-parser');
-router.use(cookieParser());
+
 
 
 
