@@ -26,7 +26,7 @@ router.post('/login', async (req, res) => {
 
  const [databaseUserData] = await db.query('SELECT * FROM Users WHERE Username = ?', [providedCredentials.username]);
 
- if(databaseUserData.length !== 0) { return res.status(401).send('Username not found'); }
+ if(databaseUserData.length !== 1) { return res.status(401).send('Username not found'); }
  // checks if the above query is empty. Is only empty if user doesn't exist.
 
  if(providedCredentials.password === databaseUserData[0].password_hash){
