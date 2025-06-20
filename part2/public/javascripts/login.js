@@ -7,7 +7,7 @@
 
 
 function login(){
-    const logindee = {
+    const loginDetails = {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value
     }
@@ -27,6 +27,6 @@ function login(){
 
     xhttp.open("post", "/login");
     xhttp.setRequestHeader('Content-Type', 'application/json');
-    xhttp.send(JSON.stringify(login));
+    xhttp.send(JSON.stringify(loginDetails));
 
 }
