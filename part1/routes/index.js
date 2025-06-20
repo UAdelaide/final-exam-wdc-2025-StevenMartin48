@@ -125,7 +125,7 @@ router.get('/api/dogs', async(req, res, next) => {
   try{
   const [doggies] = await database.execute('SELECT * from Dogs');
 
-  res.status(200).send(data);
+  res.status(200).send(doggies);
  } catch (err){
   console.log(err);
   res.status(500).send('Error');
@@ -134,8 +134,8 @@ router.get('/api/dogs', async(req, res, next) => {
 
 router.get('/api/walkrequests/open', async(req, res, next) => {
   try{
-  const [data] = await database.execute('SELECT * from WalkRequests WHERE status = ?',['open']);
-  res.status(200).send(data);
+  const [requsts] = await database.execute('SELECT * from WalkRequests WHERE status = ?',['open']);
+  res.status(200).send(requests);
  } catch (err){
   console.log(err);
   res.status(500).send('Error');
