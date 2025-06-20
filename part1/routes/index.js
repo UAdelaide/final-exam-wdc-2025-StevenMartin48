@@ -11,7 +11,7 @@ host: 'localhost',
 user: 'root'
 });
 
-
+await connection.query('')
 
 console.log('Mysql Connection established');
   } catch (err) {console.log('connection failed \n', err); } // only reason for this to fail is database not existing
