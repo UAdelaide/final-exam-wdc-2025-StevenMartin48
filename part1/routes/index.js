@@ -132,11 +132,11 @@ VALUES (5, 4, 'accepted'),
         await database.execute(`
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating)
 VALUES (5, 4, 3, 4),
-VALUES (6, 4, 3, 4),
-VALUES (7, 4, 3, 4),
-VALUES (8, 4, 3, 5),
-VALUES (9, 4, 3, 4),
-VALUES (10, 4, 3, 4);
+(6, 4, 3, 4),
+(7, 4, 3, 4),
+(8, 4, 3, 5),
+(9, 4, 3, 4),
+(10, 4, 3, 4);
 `);
 
 }
