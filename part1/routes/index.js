@@ -12,6 +12,7 @@ user: 'root'
 });
 
 await connection.query('CREATE DATABSE IF NOT EXISTS DogWalkService');
+    await connection.end();
 
 console.log('Mysql Connection established');
   } catch (err) {console.log('connection failed \n', err); } // only reason for this to fail is database not existing
