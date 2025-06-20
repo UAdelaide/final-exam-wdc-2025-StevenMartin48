@@ -19,10 +19,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/api/dogs', async(req, res, next) {
+router.get('/api/dogs', async(req, res, next) => {
 
   const [data] = await database.execute(
-    'SELECT'
+    'SELECT * from '
   )
 
 });
