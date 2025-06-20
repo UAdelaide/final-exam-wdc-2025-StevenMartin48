@@ -8,8 +8,9 @@ host: 'localhost',
 user: 'root',
 database: 'DogWalkService'
 });
-}
-)
+
+console.log('')
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
