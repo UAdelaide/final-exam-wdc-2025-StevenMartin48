@@ -14,7 +14,7 @@ router.use(session(
   }
 ));
 const cookieParser = require('cookie-parser');
-router.use(cookieParser);
+router.use(cookieParser());
 
 
 
