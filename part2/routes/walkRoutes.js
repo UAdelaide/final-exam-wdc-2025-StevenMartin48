@@ -82,7 +82,7 @@ router.post('/login', async (req, res) =>{
 
  if(serversideUsername.Length === 0) {return res.status(401).send('Username not found'); }
 
- 
+ if(credentials.password === )
 
 
 })
