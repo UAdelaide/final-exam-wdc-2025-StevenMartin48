@@ -126,11 +126,22 @@ VALUES (7, 4, 'accepted'),
 VALUES (8, 4, 'accepted'),
 VALUES (9, 4, 'accepted'),
 VALUES (10, 4, 'accepted'),
-VALUES (11, 4, 'accepted'),
-
-
+VALUES (11, 4, 'accepted')
 
     `);
+
+        await database.execute(`
+INSERT INTO WalkApplications (request_id, walker_id, status)
+VALUES (5, 4, 'accepted'),
+VALUES (6, 4, 'accepted'),
+VALUES (7, 4, 'accepted'),
+VALUES (8, 4, 'accepted'),
+VALUES (9, 4, 'accepted'),
+VALUES (10, 4, 'accepted'),
+VALUES (11, 4, 'accepted')
+
+    `);
+
 }
 
 console.log('Mysql Connection established');
