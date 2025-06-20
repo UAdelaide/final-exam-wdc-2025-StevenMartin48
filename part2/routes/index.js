@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
+const e = require('express');
 
 
 
@@ -26,10 +27,10 @@ router.post('/login', async (req, res) => {
   };
 
 
-  if (req.session.user.role === '') {
-    
-  }
- return res.status(200).send('login successful');
+  if (req.session.user.role === 'owner') {
+     return res.status(200).send('owner');
+  } else
+
 
 
 }
