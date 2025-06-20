@@ -78,11 +78,11 @@ router.post('/login', async (req, res) =>{
 
  const credentials = req.body;
 
- const [serversideUsername] = await db.query('SELECT * FROM Users WHERE Username = ?', [credentials.username]);
+ const [serversideU2sername] = await db.query('SELECT * FROM Users WHERE Username = ?', [credentials.username]);
 
  if(serversideUsername.Length === 0) {return res.status(401).send('Username not found'); }
 
- if(credentials.password === )
+ if(credentials.password === s)
 
 
 })
