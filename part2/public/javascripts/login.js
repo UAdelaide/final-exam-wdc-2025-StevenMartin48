@@ -14,7 +14,7 @@ function login(){
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload(){
-        if (this.response.code) {
+        if (this.response.code != 200) {
             
         }
     }
