@@ -85,7 +85,8 @@ router.post('/login', async (req, res) =>{
  if(providedCredentials.password === databaseUserData[0].password_hash){ // [0] because
 
   req.session.user = {
-  user_id: databaseUserData[0].
+  user_id: databaseUserData[0].user_id,
+  
   }
 
  }
