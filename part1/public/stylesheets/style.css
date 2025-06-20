@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: ;
+  background-color: darkcyan;
 }
 
 a {
@@ -9,6 +9,7 @@ a {
 }
 
 .mainContent {
+  background-color: aliceblue;
   border-color: darkgray;
   border-style: solid;
   border-radius: 20px;
