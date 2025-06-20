@@ -78,7 +78,7 @@ router.post('/login', async (req, res) =>{
 
  const credentials = req.body;
 
- const [serversideUsername] = await db.query(`SELECT * FROM Users WHERE Username = ?`);
+ const [serversideUsername] = await db.query('SELECT * FROM Users WHERE Username = ?', [credentials.username]);
 
 
 
