@@ -3,6 +3,7 @@ var router = express.Router();
 var mysql = require('mysql2/promise');
 
 (async () => {
+  try{
 const database = await mysql.createConnection({
 host: 'localhost',
 user: 'root',
