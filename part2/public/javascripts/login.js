@@ -15,12 +15,8 @@ function login(){
                 window.location.href = '/walker-dashboard.html';
             }
         }
-        else {
-           alert('this broke lol');
-        }
     };
     xhttp.open("post", "/login");
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.send(JSON.stringify(loginDetails));
-
 }
