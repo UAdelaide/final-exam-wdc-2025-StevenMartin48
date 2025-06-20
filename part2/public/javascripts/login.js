@@ -19,7 +19,7 @@ function login(){
 
             if (this.responseText === 'owner') {
 
-                
+                window.location.href = '/index';
 
             }
 
