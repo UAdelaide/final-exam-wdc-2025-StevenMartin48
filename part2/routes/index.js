@@ -40,7 +40,7 @@ router.post('/login', async (req, res) => {
  return res.status(200).send('login successful');
  }
 
- return res.status(200).send('login successful');
+ return res.status(401).send('login failed');
 
 });
 
