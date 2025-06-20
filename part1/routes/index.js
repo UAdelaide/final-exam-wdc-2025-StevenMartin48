@@ -134,11 +134,14 @@ router.get('/api/dogs', async(req, res, next) => {
 });
 
 router.get('/api/walkrequests/open', async(req, res, next) => {
-
+  try{
   const [data] = await database.execute('SELECT * from WalkRequests WHERE status = ?',['open']);
-
-  res.send(data);
-
+  );
+  res.status(200).send(data);
+ } catch (err){
+  console.log(err);
+  res.status(500).send('Error');
+ }
 });
 
 module.exports = router;
