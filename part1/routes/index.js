@@ -21,7 +21,7 @@ database: 'DogWalkService'
 });
 
 await database.execute(`
-    CREATE TABLE IF NOT EXISTS users (
+    CREATE TABLE IF NOT EXISTS Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
@@ -32,8 +32,8 @@ await database.execute(`
   `);
 // if at this point users is empty, then throw in all the rest of the data, otherwise skip
 
-const [users] = await database.execute('SELECT COUNT(*) AS count FROM Users')
-
+const [users] = await database.execute('SELECT COUNT(*) AS count FROM Users');
+if 
 
 
 
