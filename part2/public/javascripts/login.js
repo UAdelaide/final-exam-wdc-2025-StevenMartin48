@@ -14,6 +14,9 @@ function login(){
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload(){
+        if (this.response.code) {
+            
+        }
     }
     xhttp.open("post", "/login")
     xhttp.setRequestHeader('Content-Type', 'application/json');
