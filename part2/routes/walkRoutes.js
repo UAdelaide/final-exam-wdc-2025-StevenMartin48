@@ -7,7 +7,9 @@ router.use(session(
   secret: 'himitsu',
   resave: false,
   saveUninitialized: false,
-  cookies : { }
+  cookies : {
+    maxAge: 1000 
+   }
 
 
 
