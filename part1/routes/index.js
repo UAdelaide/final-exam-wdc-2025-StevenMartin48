@@ -143,3 +143,15 @@ router.get('/api/walkrequests/open', async(req, res, next) => {
 });
 
 module.exports = router;
+
+
+// [
+//   {
+//     "request_id": 1,
+//     "dog_name": "Max",
+//     "requested_time": "2025-06-10T08:00:00.000Z",
+//     "duration_minutes": 30,
+//     "location": "Parklands",
+//     "owner_username": "alice123"
+//   }
+// ]
