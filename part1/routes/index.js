@@ -29,6 +29,7 @@ router.get('/api/dogs', async(req, res, next) => {
   );
   res.send(data);
  } catch (err){
+  console.log(err);
   
  }
 });
