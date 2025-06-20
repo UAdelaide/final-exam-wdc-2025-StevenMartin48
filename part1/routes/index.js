@@ -32,7 +32,7 @@ await database.execute(`
   `);
 // if at this point users is empty, then throw in all the rest of the data, otherwise skip
 
-
+const [users] = await database.execute()
 
 
 
