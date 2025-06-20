@@ -9,6 +9,8 @@ a {
 
 .mainContent {
   border-color: darkgray;
+  border-style: solid;
+  border-radius: 20px;
   padding: 20px;
   margin: 20px;
 }
