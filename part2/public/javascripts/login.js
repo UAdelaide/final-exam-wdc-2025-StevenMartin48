@@ -1,12 +1,3 @@
-const e = require("express");
-
-
-
-
-
-
-
-
 function login(){
     const loginDetails = {
         username: document.getElementById('username').value,
@@ -23,13 +14,11 @@ function login(){
             } else {
                 window.location.href = '/walker-dashboard.html';
             }
-
         }
         else {
            alert('this broke lol');
         }
     };
-
     xhttp.open("post", "/login");
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.send(JSON.stringify(loginDetails));
