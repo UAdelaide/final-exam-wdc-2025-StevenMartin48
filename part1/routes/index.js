@@ -121,7 +121,7 @@ VALUES (5, 4, 'accepted'),
 (8, 4, 'accepted'),
 (9, 4, 'accepted'),
 (10, 4, 'accepted'),
-(11, 4, 'accepted')
+(11, 4, 'accepted');
 
     `);
 
@@ -132,7 +132,7 @@ VALUES (6, 4, 3, 4),
 VALUES (7, 4, 3, 4),
 VALUES (8, 4, 3, 5),
 VALUES (9, 4, 3, 4),
-VALUES (10, 4, 3, 4),
+VALUES (10, 4, 3, 4);
 
 
     `);
