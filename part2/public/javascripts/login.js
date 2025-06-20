@@ -10,7 +10,7 @@ function login(){
     const loginDetails = {
         username: document.getElementById('username').value,
         password: document.getElementById('password').value
-    }
+    };
 
     const xhttp = new XMLHttpRequest();
 
