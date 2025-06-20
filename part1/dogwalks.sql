@@ -62,8 +62,8 @@ INSERT INTO Users (username, email, password_hash, role) VALUES ('johnwalker', '
 
 INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium');
 INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small');
-INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'mrBig', 'large');
-INSERT INTO Dogs (owner_id, name, size) VALUES (1, 'Supermax', 'large');
+INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'JEFF'), 'mrBig', 'large');
+INSERT INTO Dogs (owner_id, name, size) VALUES ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Supermax', 'large');
 INSERT INTO Dogs (owner_id, name, size) VALUES (4, 'Godzilla', 'small');
 
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open');
