@@ -7,11 +7,7 @@ const database = await mysql.createConnection({
 host: 'localhost',
 user: 'root',
 database: 'DogWalkService'
-
-
-
-
-})
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
