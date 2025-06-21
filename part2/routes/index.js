@@ -13,6 +13,7 @@ router.post('/login', async (req, res) => {
 
  if(providedCredentials.password === databaseUserData[0].password_hash){
   // [0] because the only response should be the user
+  // this should be checking a hash, the lack of security is sad
 
   req.session.user = { // session data
   user_id: databaseUserData[0].user_id,
