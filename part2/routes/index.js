@@ -60,7 +60,16 @@ const [userdogs] = await db.query('SELECT name, dog_id FROM Dogs WHERE owner_id 
 
 
 
+router.get('/api/dogs', async(req, res, next) => {
 
+  try{
+  const [doggies] = await db.execute('SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs INNER JOIN Users ON Dogs.owner_id=Users.user_id;');
+
+  res.status(200).send(doggies);
+ } catch (err){
+  res.status(500).send('Error');
+ }
+});
 
 
 
