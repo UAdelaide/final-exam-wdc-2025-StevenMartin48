@@ -33,10 +33,10 @@ if (req.session.user) {
 return res.status(401).send(`not logged in`);
 });
 
-router.get('/logout', (req, res) => { // destroys the session and deletes the cookie
+router.get('/logout', (req, res) => {
 
    req.session.destroy();
-   return res.clearCookie('connect.sid').redirect('/'); // redirects to /
+   return res.status(200).clearCookie('connect.sid').send('success');
 });
 
 
