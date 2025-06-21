@@ -30,8 +30,8 @@
 
             <select v-model="form.dog_id" class="form-control" required>
               <option disabled value="">Pick the dog that wants walkies</option>
-              <option v-for="doggies in doglist" : key="doggies.dog_id" : value="doggies.dog_id">
-                {{diggies.dog_name}}
+              <option v-for="doggies in doglist" :key="doggies.dog_id" :value="doggies.dog_id">
+                {{doggies.name}}
               </option>
 
 
