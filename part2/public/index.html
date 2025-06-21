@@ -47,7 +47,7 @@
 
       async function getDogImages(){
 
-      for (let i = 0; i < doggiecount; i++) {
+      for (let i = 0; i < doggies.value.length; i++) {
 
         let fetchDog = await fetch('https://dog.ceo/api/breeds/image/random');
         let doginfo = await fetchDog.json();
