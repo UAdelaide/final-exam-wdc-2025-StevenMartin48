@@ -142,10 +142,11 @@
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function(){
 
+          console.log(this.response);
 
         doggies.value = this.response;
 
-        console 
+
 
         };
         xhttp.open("get", "/getownerdogs");
