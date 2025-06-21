@@ -9,6 +9,7 @@ router.post('/login', async (req, res) => {
 
  if(databaseUserData.length !== 1) { return res.status(401).send('Username not found'); }
  // checks if the above query only returns 1 user. Is only empty if user doesn't exist.
+ // should never return more than 1 user without sql injection I guess
 
  if(providedCredentials.password === databaseUserData[0].password_hash){
   // [0] because the only response should be the user
