@@ -40,11 +40,7 @@
       const fetchdoggies = await fetch(`/api/dogs`);
         if(fetchdoggies.status === 200){
           doggies.value = await fetchdoggies.json();
-          doggies.value.forEach(doggo => {
-              const fetchDog = await fetch('https://dog.ceo/api/breeds/image/random');
-              const doginfo = await fetchDog.json()
-              const dogimage = doginfo.message
-          });
+          
         }
       }
 
