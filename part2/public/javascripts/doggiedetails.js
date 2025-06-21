@@ -1,5 +1,5 @@
 
-
+var doggies = [];
 
 
 function getdog(){
