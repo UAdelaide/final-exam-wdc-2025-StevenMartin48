@@ -35,12 +35,12 @@
       setup(){
       const doggies = ref([])
       const doggyimages = ref([])
-
+      let doggiecount = 0;
       async function getDoggies(){
       const fetchdoggies = await fetch(`/api/dogs`);
         if(fetchdoggies.status === 200){
           doggies.value = await fetchdoggies.json();
-          
+          doggiecount = 
         }
       }
 
