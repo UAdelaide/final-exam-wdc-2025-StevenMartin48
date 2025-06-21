@@ -61,8 +61,6 @@
         async function getCurrentUser() {
 
           let userid;
-          // idk why I normally use xhttp tbh, fetch is so much nicer
-          // finally forced to use fetch due to promise nonsense though
           const fetchtime = await fetch('api/users/me')
           if(fetchtime.status === 200){
             userid = await fetchtime.text();
