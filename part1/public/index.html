@@ -40,14 +40,14 @@
 
         async function getdog(){
         const fetchDog = await fetch('https://dog.ceo/api/breeds/image/random');
-        const doginfo = fetchdog.json()
+        const doginfo = await fetchdog.json()
         const dogimage = doginfo.message
         return dogimage;
         }
 
         onMounted(() => {
 
-          dailydoggo = getdog();
+          dailydoggo.value = getdog();
 
         });
 
