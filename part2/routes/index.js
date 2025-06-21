@@ -42,7 +42,7 @@ router.get('/logout', (req, res) => {
 
 router.get('/getownerdogs', async (req, res) => {
 
-const [userdogs] = await db.query('SELECT name, dogid FROM dogs WHERE Username = ?', [req.session.user.user_name]);
+const [userdogs] = await db.query('SELECT name, dog_id FROM dogs WHERE Username = ?', [req.session.user.user_name]);
 
 
 
