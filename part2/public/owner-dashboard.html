@@ -149,8 +149,6 @@
         xhttp.open("get", "/getownerdogs");
         xhttp.send();
 
-        return doggies;
-
         }
 
         onMounted(async () => {
@@ -159,6 +157,7 @@
         });
 
         return {
+          doggies,
           form,
           walks,
           message,
