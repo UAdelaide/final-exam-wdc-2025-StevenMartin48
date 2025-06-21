@@ -42,9 +42,12 @@
         const fetchDog = await fetch('https://dog.ceo/api/breeds/image/random');
         const doginfo = fetchdog.json()
         const dogimage = doginfo.message
+        return dogimage;
         }
 
         onMounted(() => {
+
+          dailydoggo = getdog();
 
         });
 
