@@ -4,7 +4,7 @@ require('dotenv').config();
 var logger = require('morgan');
 const app = express();
 app.use(logger('dev'));
-
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 app.use(session({
   secret: 'himitsu',
@@ -15,7 +15,7 @@ app.use(session({
     secure: false
    }
 }));
-const cookieParser = require('cookie-parser');
+
 app.use(cookieParser());
 
 
