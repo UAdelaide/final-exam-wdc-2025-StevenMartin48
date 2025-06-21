@@ -27,7 +27,8 @@ router.post('/login', async (req, res) => {
 
 
 router.get('/sessioncheck', async (req, res) => {
-   console.log('session',)
+   console.log('session',req.session);
+   console.log('session',req.session);
 if (req.session.user) {
    return res.status(200).send(`${req.session.user.user_name}`);
 }
