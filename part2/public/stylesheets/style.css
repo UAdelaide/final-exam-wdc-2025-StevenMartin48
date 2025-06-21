@@ -156,6 +156,6 @@ section {
 }
 
 .dogimage {
-    height: 200p
-
+    height: 250px;
+    width: auto;
 }
