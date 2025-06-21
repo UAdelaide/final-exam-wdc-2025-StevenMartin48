@@ -60,15 +60,15 @@
 
         async function getCurrentUser() {
 
-          var userid;
+          let userid;
 
           let xhttp = new XMLHttpRequest();
           xhttp.onload = function(){
 
             if (this.status === 200)
           {
-            console.log(this.response);
-            return this.response;}
+
+            userid = this.response;}
           }
           xhttp.open('get',"/api/users/me");
           xhttp.send();
