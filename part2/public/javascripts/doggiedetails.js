@@ -13,7 +13,7 @@ doggies = this.response.body;
 
 
 };
-xhttp.open("get", "/getownersdogs");
+xhttp.open("get", "/getownerdogs");
 xhttp.send();
 
 
