@@ -61,12 +61,10 @@ const [userdogs] = await db.query('SELECT name, dog_id FROM Dogs WHERE owner_id 
 
 router.get('/api/users/me', async (req, res) => {
 
-
-
-
-
-
-
+if (req.session.user) {
+   return res.status(200).send(`${req.session.user.user_id}`);
+}
+return res.status(401).send(`not logged in`);
 });
 
 
