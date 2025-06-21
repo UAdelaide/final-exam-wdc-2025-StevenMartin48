@@ -26,20 +26,15 @@
 
 
 
-<script>
-
-
-const { createApp } = Vue;
-
-var test = 0;
-
-const app = createApp({
-  setup() {
-    return {
-      count: test
-    };
-  }
-}).mount('#app');
-</script>
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          message: 'Welcome to the Dog Walking Service!'
+        };
+      }
+    }).mount('#app');
+  </script>
 
 </body>
