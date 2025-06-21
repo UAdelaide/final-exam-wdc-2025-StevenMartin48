@@ -35,7 +35,7 @@
       setup(){
       const doggies = ref([])
       const doggyimages = ref([])
-      var dogImageHelper = {};
+      var dogImageHelper = [];
       let doggiecount = 0;
       async function getDoggies(){
       const fetchdoggies = await fetch(`/api/dogs`);
