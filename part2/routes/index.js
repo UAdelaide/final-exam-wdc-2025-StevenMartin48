@@ -26,9 +26,9 @@ router.post('/login', async (req, res) => {
 
 router.get('/sessioncheck', async (req, res) => {
 if (req.session.user) {
-   res.status(200).send(`logged in as ${req.session.user.username}`);
+   return res.status(200).send(`logged in as ${req.session.user.username}`);
 }
-
+return res.status(401).send(`not logged in`);
 
 
 
