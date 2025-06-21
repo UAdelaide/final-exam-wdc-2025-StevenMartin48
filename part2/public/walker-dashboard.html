@@ -59,14 +59,12 @@
         }
 
         async function getCurrentUser() {
-
           let userid;
           const fetchtime = await fetch('api/users/me')
           if(fetchtime.status === 200){
             userid = await fetchtime.text();
             return userid;
           }
-
         }
 
         async function applyToWalk(requestId) {
