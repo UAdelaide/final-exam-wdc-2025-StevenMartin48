@@ -65,7 +65,7 @@
           // finally forced to use fetch due to promise nonsense though
           const fetchtime = await fetch('api/users/me')
           if(fetchtime.status === 200){
-            userid = fetchtime.response;}
+            userid = fetchtime.response;
             return userid;
           }
 
