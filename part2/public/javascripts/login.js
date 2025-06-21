@@ -33,7 +33,7 @@ function logout(){
     };
 
     xhttp.open("get", "logout");
-
+    xhttp.send();
 
 
 
