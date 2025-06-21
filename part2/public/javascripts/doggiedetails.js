@@ -1,5 +1,5 @@
 
-var doggies = [];
+var doggies = {};
 
 
 function getdog(){
@@ -7,7 +7,7 @@ function getdog(){
 const xhttp = new XMLHttpRequest();
 xhttp.onload = function(){
 
-
+doggies = this.response;
 
 
 };
