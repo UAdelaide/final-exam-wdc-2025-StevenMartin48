@@ -27,8 +27,6 @@ router.post('/login', async (req, res) => {
 
 
 router.get('/sessioncheck', async (req, res) => {
-   console.log('session ',req.session);
-   console.log('cookies ',req.cookies);
 if (req.session.user) {
    return res.status(200).send(`${req.session.user.user_name}`);
 }
@@ -40,7 +38,7 @@ router.get('/logout', (req, res) => {
    req.session.destroy();
    req.clearcookie('connect.sid');
 
-   return res.status(200).send('success');
+   return res.status(200).send('success').redirect('/');
 });
 
 
