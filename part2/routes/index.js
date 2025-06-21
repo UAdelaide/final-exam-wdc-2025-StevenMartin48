@@ -24,7 +24,19 @@ router.post('/login', async (req, res) => {
 });
 
 
-router.get('/sessioncheck', async (req, res) => )
+router.get('/sessioncheck', async (req, res) => {
+if (req.session.user) {
+   
+}
+
+
+
+
+
+
+
+
+})
 
 
 
