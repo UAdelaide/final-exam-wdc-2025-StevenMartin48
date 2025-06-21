@@ -53,11 +53,8 @@
         let doginfo = await fetchDog.json();
         let dogimage = doginfo.message;
         dogImageHelper.push(dogimage);
-
-
       }
-
-      doggyimages
+      doggyimages.value = dogImageHelper;
     }
 
 
