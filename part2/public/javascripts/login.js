@@ -23,9 +23,9 @@ function login(){
 
 function logout(){
 
+    const xhttp = new XMLHttpRequest();
 
-
-
+    
 
 
 
