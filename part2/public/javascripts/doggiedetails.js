@@ -16,5 +16,5 @@ doggies = this.response;
 xhttp.open("get", "/getownerdogs");
 xhttp.send();
 
-
+return;
 }
