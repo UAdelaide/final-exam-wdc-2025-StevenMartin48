@@ -38,7 +38,7 @@ router.get('/logout', (req, res) => {
    req.session.destroy();
    res.clearCookie('connect.sid');
 
-   return res.status(200).redirect('/').send('success');
+   return res.status(200).clearCookie('connect.sid').redirect('/').send('success');
 });
 
 
