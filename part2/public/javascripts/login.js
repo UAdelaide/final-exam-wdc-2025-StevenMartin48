@@ -25,7 +25,12 @@ function logout(){
 
     const xhttp = new XMLHttpRequest();
 
-    
+    xhttp.onload = function(){
+        if (this.status === 200) {
+
+            
+        }
+    }
 
 
 
