@@ -20,22 +20,24 @@ function login(){
     xhttp.send(JSON.stringify(loginDetails));
 }
 
-function logout(){
+// not used but preserved in case I change my mind
 
-    const xhttp = new XMLHttpRequest();
+// function logout(){
 
-    xhttp.onload = function(){
-        if (this.status === 200) {
+//     const xhttp = new XMLHttpRequest();
 
-            window.location.href = '/';
+//     xhttp.onload = function(){
+//         if (this.status === 200) {
 
-        }
-    };
+//             window.location.href = '/';
 
-    xhttp.open("get", "logout");
-    xhttp.send();
+//         }
+//     };
+
+//     xhttp.open("get", "logout");
+//     xhttp.send();
 
 
 
 
-}
+// }
