@@ -45,9 +45,9 @@
         return dogimage;
         }
 
-        onMounted(() => {
+        onMounted(async() => {
 
-          dailydoggo.value = getdog();
+          dailydoggo.value = await getdog();
 
         });
 
