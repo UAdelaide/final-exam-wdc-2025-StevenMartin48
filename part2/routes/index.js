@@ -17,7 +17,7 @@ router.post('/login', async (req, res) => {
 
   req.session.user = { // session data
   user_id: databaseUserData[0].user_id,
-  user_name: databaseUserData[0].user_name,
+  user_name: databaseUserData[0].username,
   role: databaseUserData[0].role
   };
      return res.status(200).send(req.session.user.role);
