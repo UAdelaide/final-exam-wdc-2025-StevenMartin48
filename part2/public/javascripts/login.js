@@ -22,22 +22,19 @@ function login(){
 
 // not used but preserved in case I change my mind
 
-// function logout(){
+function logout(){
 
-//     const xhttp = new XMLHttpRequest();
+    const xhttp = new XMLHttpRequest();
 
-//     xhttp.onload = function(){
-//         if (this.status === 200) {
+    xhttp.onload = function(){
+        if (this.status === 200) {
 
-//             window.location.href = '/';
+            window.location.href = '/';
 
-//         }
-//     };
+        }
+    };
 
-//     xhttp.open("get", "logout");
-//     xhttp.send();
+    xhttp.open("get", "logout");
+    xhttp.send();
 
-
-
-
-// }
+}
