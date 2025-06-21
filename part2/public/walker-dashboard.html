@@ -64,7 +64,10 @@
           // idk why I normally use xhttp tbh, fetch is so much nicer
           // finally forced to use fetch due to promise nonsense though
           const fetchtime = await fetch('api/users/me')
-          if(fetchtime.status === 200)
+          if(fetchtime.status === 200){
+            userid = fetchtime.response;}
+            return userid;
+          }
 
           let xhttp = new XMLHttpRequest();
           xhttp.onload = function(){
@@ -72,8 +75,7 @@
             if (this.status === 200)
           {
 
-            userid = this.response;}
-            return userid;
+
           }
           xhttp.open('get',"/api/users/me");
           xhttp.send();
