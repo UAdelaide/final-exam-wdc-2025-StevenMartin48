@@ -33,9 +33,9 @@ if (req.session.user) {
    return res.status(200).send(`${req.session.user.user_name}`);
 }
 return res.status(401).send(`not logged in`);
-})
+});
 
-
+router.get('/logout', (req, res))
 
 
 
