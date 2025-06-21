@@ -20,3 +20,17 @@ function login(){
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.send(JSON.stringify(loginDetails));
 }
+
+function logout(){
+
+
+
+
+
+
+
+
+
+
+
+}
