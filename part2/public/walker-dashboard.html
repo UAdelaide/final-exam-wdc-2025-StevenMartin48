@@ -67,7 +67,8 @@
             if (this.status === 200)
           {return this.response;}
           }
-          xhttp.open('get',"/api/")
+          xhttp.open('get',"/api/users/me");
+          xhttp.send();
 
         }
 
