@@ -8,7 +8,6 @@ function login(){
 
     xhttp.onload = function() {
         if (this.status === 200) {
-            console.log(this.responseText);
             if (this.responseText === 'owner') { // redirect owners to owner page
                 window.location.href = '/owner-dashboard.html';
             } else {
@@ -28,7 +27,8 @@ function logout(){
     xhttp.onload = function(){
         if (this.status === 200) {
 
-            
+            window.location.href = '/'
+
         }
     }
 
