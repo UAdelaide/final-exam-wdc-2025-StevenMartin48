@@ -27,13 +27,14 @@
   <script>
     const { createApp, ref, onMounted} = Vue;
     createApp({
-      const doggies = ref([])
-      
+
+
       setup(){
+      const doggies = ref([])
       async function getDoggies(){
       const fetchdoggies = await fetch(`/api/dogs`);
         if(fetchdoggies.status === 200){
-
+          doggies.value = 
         }
 
 
