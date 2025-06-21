@@ -44,7 +44,13 @@ router.get('/getownerdogs', async (req, res) => {
 
    try{
 const [userdogs] = await db.query('SELECT name, dog_id FROM Dogs WHERE owner_id = ?', [req.session.user.user_id]);
-   } catch (err){console.log(err);}
+
+   
+
+
+
+
+   } catch (err){ console.log(err); }
 
 
 });
