@@ -40,7 +40,7 @@
 
         async function getdog(){
         const fetchDog = await fetch('https://dog.ceo/api/breeds/image/random');
-        const doginfo = await fetchdog.json()
+        const doginfo = await fetchDog.json()
         const dogimage = doginfo.message
         console.log(dogimage);
         return dogimage;
