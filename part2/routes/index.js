@@ -46,7 +46,7 @@ router.get('/getownerdogs', async (req, res) => {
 
 
 
-// fetches dogs based on the session
+// fetches dogs based on the session userID
 const [userdogs] = await db.query('SELECT name, dog_id FROM Dogs WHERE owner_id = ?', [req.session.user.user_id]);
 
 
