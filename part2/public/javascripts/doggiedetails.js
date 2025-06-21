@@ -11,4 +11,4 @@ xhttp.open("get", "/getownersdogs");
 xhttp.send();
 
 
-};
+}
