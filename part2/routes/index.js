@@ -26,7 +26,7 @@ router.post('/login', async (req, res) => {
 
 router.get('/sessioncheck', async (req, res) => {
 if (req.session.user) {
-   res.send('logged in as ')
+   res.send('logged in as ${req.session.user.username}')
 }
 
 
