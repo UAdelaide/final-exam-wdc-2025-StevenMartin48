@@ -43,12 +43,12 @@ router.get('/logout', (req, res) => {
 router.get('/getownerdogs', async (req, res) => {
 
    try{
+
+      console.log('test');
+
 const [userdogs] = await db.query('SELECT name, dog_id FROM Dogs WHERE owner_id = ?', [req.session.user.user_id]);
 
    res.status(200).send(userdogs);
-
-
-
 
    } catch (err){ console.log(err); }
 
