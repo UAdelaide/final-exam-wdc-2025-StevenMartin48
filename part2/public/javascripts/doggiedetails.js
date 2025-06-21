@@ -7,8 +7,8 @@ xhttp.onload = function(){
 
 
 };
-xhttp.open("get", "/getdogs")
-
+xhttp.open("get", "/getownersdogs");
+xhttp.send();
 
 
 };
