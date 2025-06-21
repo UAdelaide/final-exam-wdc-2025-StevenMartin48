@@ -40,7 +40,13 @@ router.get('/logout', (req, res) => {
 });
 
 
-router.get('/getownerdogs', ())
+router.get('/getownerdogs', async (req, res) => {
+
+
+
+
+
+});
 
 
 
