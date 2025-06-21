@@ -27,7 +27,7 @@
   <script>
     const { createApp, ref, onMounted} = Vue;
     createApp({
-
+      let doggies = {}
       setup(){
       async function getDoggies(){
       const fetchdoggies = await fetch(`/api/dogs`);
