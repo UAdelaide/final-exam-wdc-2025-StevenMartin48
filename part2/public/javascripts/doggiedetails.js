@@ -1,4 +1,5 @@
 
-var doggies = {};
+// var doggies = {};
 
 
+// getdogs()
