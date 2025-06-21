@@ -55,4 +55,14 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/api/users/me', async (req, res) => {
+
+
+if (req.session.user) {
+   console.log(req.session.user.user_id);
+   return res.status(200).send(`${req.session.user.user_id}`);
+}
+return res.status(401).send(`not logged in`);
+});
+
 module.exports = router;
