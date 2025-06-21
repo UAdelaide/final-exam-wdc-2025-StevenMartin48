@@ -31,7 +31,9 @@
       setup(){
       async function getDoggies(){
       const fetchdoggies = await fetch(`/api/dogs`);
-        if(fetchdoggies.status)
+        if(fetchdoggies.status === 200){
+
+        }
 
 
 
