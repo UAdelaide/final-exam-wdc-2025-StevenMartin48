@@ -41,7 +41,7 @@
         async function getdog(){
         const fetchDog = await fetch('https://dog.ceo/api/breeds/image/random');
         const doginfo = fetchdog.json()
-        const dogimage = 
+        const dogimage = doginfo.message
         }
 
         onMounted(() => {
