@@ -7,7 +7,7 @@ xhttp.onload = function(){
 
 
 };
-xhttp.
+xhttp.open("get", "/getdogs")
 
 
 
