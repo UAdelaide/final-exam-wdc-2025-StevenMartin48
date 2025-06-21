@@ -44,10 +44,11 @@ router.get('/getownerdogs', async (req, res) => {
 
    try{
 
-      console.log('test');
 
+
+// fetches dogs based on the session
 const [userdogs] = await db.query('SELECT name, dog_id FROM Dogs WHERE owner_id = ?', [req.session.user.user_id]);
-//fetches 
+
 
    res.status(200).send(userdogs);
 
