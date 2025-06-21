@@ -45,11 +45,13 @@
 
 
 
-        onMounted(() => {
-          getDoggies();
-        });
+      onMounted(() => {
+        getDoggies();
+      });
+      return{
+        doggies
+      }
 
-        
 
           },
                 data() {
