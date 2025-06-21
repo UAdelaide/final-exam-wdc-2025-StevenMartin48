@@ -59,7 +59,7 @@ const [userdogs] = await db.query('SELECT name, dog_id FROM Dogs WHERE owner_id 
 
 
 
-
+router.get('/getownerdogs', async (req, res) => {
 
 
 
