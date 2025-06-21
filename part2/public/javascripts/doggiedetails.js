@@ -7,7 +7,7 @@ function getdog(){
 const xhttp = new XMLHttpRequest();
 xhttp.onload = function(){
 
-    console.log
+    console.log(this.response);
 
 doggies = this.response;
 
