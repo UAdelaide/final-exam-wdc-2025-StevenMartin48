@@ -16,7 +16,7 @@
     <label>Password</label><br><input id="password" type="password" placeholder="password"><br>
     <button type="button" onclick="login()">Log in</button>
     <div id="app">
-  <img :src="dailydoggo">
+  <img v-if="dailydoggo" :src="dailydoggo">
 
 </div>
 </div>
