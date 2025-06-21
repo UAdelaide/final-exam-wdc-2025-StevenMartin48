@@ -42,7 +42,7 @@
         const fetchDog = await fetch('https://dog.ceo/api/breeds/image/random');
         const doginfo = await fetchdog.json()
         const dogimage = doginfo.message
-        console.log
+        console.log(dogimage);
         return dogimage;
         }
 
