@@ -2,7 +2,7 @@
 var doggies = {};
 
 
-function getdog(){
+function getdogs(){
 
 const xhttp = new XMLHttpRequest();
 xhttp.onload = function(){
